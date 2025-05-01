@@ -8,11 +8,6 @@ const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
-  const toggleResume = () => {
-    const resumeUrl = 'https://drive.google.com/file/d/1enL2dJq5f6yAOsK5SXjxRS8f67y5p8jf/view?usp=sharing';
-    window.open(resumeUrl);
-  };
-
   useEffect(() => {
     if (toggle) {
       setActive('');
@@ -24,9 +19,13 @@ const Navbar = () => {
       {navLinks.map((link) => (
         <li
           key={link.id}
-          className={`${
-            active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
+          className={`
+          ${active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'}
+          relative text-[20px] font-medium cursor-pointer transition-colors duration-300
+          after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px]
+          after:bg-white after:transition-all after:duration-300 hover:after:w-full
+          hover:text-secondary
+        `}
           onClick={() => {
             setActive(link.title);
             if (isSecondary) {
@@ -38,11 +37,9 @@ const Navbar = () => {
         </li>
       ))}
       <li
-        className={`text-${
-          isSecondary ? 'secondary' : 'white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
+        className={`text-${isSecondary ? 'secondary' : 'white'
+          } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
-        <button onClick={toggleResume}>CV</button>
       </li>
     </ul>
   );
@@ -76,9 +73,8 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
             <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
-                toggle ? 'flex' : 'hidden'
-              }`}
+              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${toggle ? 'flex' : 'hidden'
+                }`}
             >
               {renderNavLinks(true)}
             </div>

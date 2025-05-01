@@ -31,6 +31,10 @@ export const navLinks = [
     title: "À propos ",
   },
   {
+    id: "study",
+    title: "Études",
+  },
+  {
     id: "work",
     title: "Expériences",
   },
@@ -64,27 +68,28 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Stage AI",
+    title: "Stage en Intelligence Artificielle",
     company_name: "4NK",
     icon: fourNK,
     iconBg: "#161329",
     date: "Mai 2024 - Juillet 2024",
     points: [
-      "Dans ce stage j'ai acquis de l'expérience sur les IA et notamment les API. ",
-      "J'ai aussi commencé à m'intéresser au Rust,Javascript,Typescript",
+      "Durant ce stage, j'ai acquis de l'expérience en intelligence artificielle, en particulier dans l'utilisation d'API liées à l'IA.",
+      "J'ai également commencé à m'intéresser aux langages Rust, JavaScript et TypeScript.",
     ],
   },
   {
-    title: "Stage intégration",
+    title: "Stage en Intégration",
     company_name: "4NK",
     icon: fourNK,
     iconBg: "#161329",
     date: "Janvier 2025 - Février 2025",
     points: [
-      "Ce stage m'a permis d'approfondir mes connaissances en typescript, notamment en intégrant la stack de 4nk dans celle de Lecoffre.io",
+      "Ce stage m'a permis d'approfondir mes compétences en TypeScript, notamment en intégrant la stack technique de 4NK dans celle de Lecoffre.io.",
     ],
   },
 ];
+
 export const veilles = [
   {
     title: "Full Dive VR, utopie ou futur proche?",
