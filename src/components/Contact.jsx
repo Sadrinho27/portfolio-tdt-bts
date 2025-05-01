@@ -67,16 +67,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+        "service_75jizp4",
+        "template_cq8n1ra",
         {
-          from_name: form.name,
-          to_name: "Titouan DEMEILLEZ TABERE",
-          from_email: form.email,
-          to_email: "titouan.tabere@gmail.com",
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        "p-gXzzyvEhPaJ0XA-"
+        "CQfzJyMQlrsY0bZZQ"
       )
       .then(
         () => {
