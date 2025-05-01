@@ -23,6 +23,7 @@ import {
   CompileVortex,
   fourNK,
   logo,
+  quizzoum,
 } from "../assets";
 
 export const navLinks = [
@@ -161,7 +162,7 @@ export const projects = [
     ],
     image: portfolio,
     source_code_link:
-      "https://github.com/Sadrinho27/portfolio-tdt",
+      "https://github.com/Sadrinho27/portfolio-tdt2",
   },
   {
     name: "Site Vitrine Sloom",
@@ -209,7 +210,7 @@ export const projects = [
       { name: "PHP", color: "red-text-gradient" }
     ],
     image: Formation,
-    source_code_link: "https://github.com/LeoC76/Projet3Web",
+    source_code_link: "https://github.com/Sadrinho27/EasyBeeWeb",
   },
   {
     name: "GEN IA",
@@ -220,7 +221,7 @@ export const projects = [
       { name: "JSON", color: "green-text-gradient" }
     ],
     image: fourNK,
-    source_code_link: "https://drive.google.com/file/d/1eqwlX72TSukRmxMVZ0FisRC0cDkaMMUg/view?usp=sharing",
+    source_code_link: "https://drive.google.com/file/d/1Ykj28iHveKm2g8F4Iq5Xg72QjpMF8HNg/view?usp=sharing",
   },
   {
     name: "Retranscription IA",
@@ -231,7 +232,7 @@ export const projects = [
       { name: "JSON", color: "green-text-gradient" }
     ],
     image: fourNK,
-    source_code_link: "https://drive.google.com/file/d/1_XR8CquUDOTmhp--6akn_9GRMH9WwuTI/view?usp=sharing",
+    source_code_link: "https://drive.google.com/file/d/1opFkNDAfyYNfCzSD5t0PptfqnZZY35CT/view?usp=sharing",
   },
   {
     name: "Intégration 4nk",
@@ -254,8 +255,8 @@ export const projects = [
       { name: "QuizApplication", color: "orange-text-gradient" },
       { name: "Java", color: "red-text-gradient" }
     ],
-    image: "",
+    image: quizzoum,
     source_code_link:
-      "https://github.com/Sadrinho27/Blockchain.git",
+      "https://github.com/Sadrinho27/Quizzoum.git",
   }
 ];

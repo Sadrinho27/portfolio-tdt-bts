@@ -16,6 +16,7 @@ import Sloom from "./projects/Sloom.png";
 import CompileVortex from "./projects/CompileVortex.png";
 import cobian from "./projects/cobian.png";
 import blockchain from "./projects/blockchain.png";
+import quizzoum from "./projects/quizzoum.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -56,6 +57,7 @@ export {
   Sloom,
   cobian,
   blockchain,
+  quizzoum,
   CompileVortex,
   logo,
   menu,

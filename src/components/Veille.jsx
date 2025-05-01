@@ -15,10 +15,11 @@ import { textVariant } from "../utils/motion";
 const VeilleCard = ({ veille }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#100D15",
+      background: "linear-gradient(145deg, #1a0e10, #3a0d11)", // fond noir-rouge
       color: "#fff",
+      boxShadow: "0 0 10px rgba(255, 0, 0, 0.3)", // effet lumineux rouge
     }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
+    contentArrowStyle={{ borderRight: "7px solid #8B0000" }} // flèche rouge foncé
     date={veille.date}
     iconStyle={{ background: veille.iconBg }}
     icon={
@@ -32,18 +33,25 @@ const VeilleCard = ({ veille }) => (
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">{veille.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
-        {veille.company_name} 
+      <h3 className="text-red-400 text-[24px] font-bold">{veille.title}</h3>
+      <p className="text-white text-[16px] font-semibold" style={{ margin: 0 }}>
+        {veille.company_name}
       </p>
-      <a href={veille.source}>Source</a>
+      <a
+        href={veille.source}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-2 text-sm text-white bg-red-600 hover:bg-red-700 transition px-3 py-1 rounded-md"
+      >
+        🔗 Source
+      </a>
     </div>
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
       {veille.points.map((point, index) => (
         <li
           key={`veille-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
+          className="text-white text-[14px] pl-1 tracking-wider"
         >
           {point}
         </li>

@@ -10,41 +10,48 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ name, description, tags, image, source_code_link, index }) => {
   return (
-    <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
-      {/* Conteneur avec le dégradé gold-grey-gradient */}
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.1, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <Tilt
         options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
+          max: 25,
+          scale: 1.03,
+          speed: 400,
         }}
-        className="w-full sm:w-[360px] gold-grey-gradient p-[1px] rounded-[20px]"
+        className="w-full sm:w-[360px] rounded-[20px] border border-red-700 bg-gradient-to-br from-[#0a0a0a] to-[#1c0a0a] shadow-md hover:shadow-red-500 transition-all duration-300"
       >
-        {/* Contenu de la carte */}
-        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[380px] flex justify-evenly items-center flex-col">
-          <div className="relative w-full h-[230px]">
+        <div className="rounded-[20px] py-6 px-6 flex flex-col justify-between min-h-[460px]">
+          {/* Image */}
+          <div className="relative w-full flex justify-center items-center overflow-hidden rounded-[15px] bg-black p-2 min-h-[200px] max-h-[280px]">
             <img
               src={image}
               alt="project_image"
-              className="w-full h-full object-cover rounded-[15px]"
+              className="max-h-[260px] w-auto object-contain"
             />
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="bg-red-700 hover:bg-red-500 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-md transform transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-12"
               >
                 <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
               </div>
             </div>
           </div>
 
-          <h3 className="text-white text-[20px] font-bold text-center">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          {/* Titre et description */}
+          <div className="mt-5 flex-1 flex flex-col items-center text-center">
+            <h3 className="text-red-500 text-[21px] font-bold">{name}</h3>
+            <p className="mt-2 text-gray-200 text-[14px]">{description}</p>
+          </div>
 
-          {/* Affichage des tags */}
-          <div className="mt-4 flex flex-wrap gap-2">
+          {/* Tags */}
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
             {tags.map((tag) => (
-              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              <p key={tag.name} className={`text-[13px] ${tag.color}`}>
                 #{tag.name}
               </p>
             ))}
@@ -55,22 +62,33 @@ const ProjectCard = ({ name, description, tags, image, source_code_link, index }
   );
 };
 
-
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Mon Travail</p>
+      <motion.div
+        variants={textVariant(0.2)} // ajoute un petit delay si besoin
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }} // s'active au scroll
+      >
+        <p className={`${styles.sectionSubText}`}>Mon Travail</p>
         <h2 className={`${styles.sectionHeadText}`}>Mes Projets</h2>
       </motion.div>
       <div className="w-full flex">
-        <motion.p variants={fadeIn("", "", 0.1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
           Voici les projets que j'ai pu réaliser, ils attestent de ma compétence, chaque projet est accompagné d'une petite description ainsi qu'un lien pour accéder au dépôt.
         </motion.p>
+
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
     </>

@@ -20,16 +20,20 @@ const Study = () => {
           <p className="mt-2 text-[16px]">
             Cette épreuve consiste à présenter nos projets devant un jury. La grille de synthèse récapitule les différents projets réalisés permettant de valider les compétences du référentiel. Voici ma grille de synthèse :
           </p>
-          <a
-            href="https://drive.google.com/file/d/1ouulwgfYSJGGa6Bbhyq0oshKgOiIQAWo/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4"
-          >
-            <button className="bg-secondary hover:bg-tertiary text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-300 ease-in-out">
-              📄 Grille de synthèse – Épreuve E5
-            </button>
-          </a>
+          <ul className="list-none ml-5 mt-2 space-y-2 text-[16px]">
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1ouulwgfYSJGGa6Bbhyq0oshKgOiIQAWo/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4"
+              >
+                <button className="bg-secondary hover:bg-tertiary text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-300 ease-in-out">
+                  📄 Grille de synthèse – Épreuve E5
+                </button>
+              </a>
+            </li>
+          </ul>
         </motion.div>
 
         {/* Épreuve E6 */}
@@ -38,7 +42,7 @@ const Study = () => {
           <p className="mt-2 text-[16px]">
             Cette épreuve repose sur deux fiches présentant des projets réalisés lors des ateliers de professionnalisation. Elle consiste à intervenir sur un projet existant en temps réel, en réponse à la demande d’une nouvelle fonctionnalité. Avant toute modification du code, il est nécessaire de rédiger les user stories et d’adapter la structure de la base de données si besoin.
           </p>
-          <ul className="list-disc ml-5 mt-2 space-y-2 text-[16px]">
+          <ul className="list-none ml-5 mt-2 space-y-2 text-[16px]">
             <li>
               <a
                 href="https://drive.google.com/file/d/1L-cceeS0X-Nh6B0qFARR5qwerdta1RYD/view?usp=drive_link"

@@ -7,25 +7,32 @@ import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className="w-full gold-grey-gradient p-[1px] rounded-[20px] shadow-card"
+  <motion.div variants={fadeIn('right', 'spring', index * 0.5, 0.75)}>
+    <Tilt
+      options={{
+        max: 25,
+        scale: 1.03,
+        speed: 400,
+      }}
+      className="w-full xs:w-[220px] sm:w-[240px] rounded-[15px] border border-red-700 bg-gradient-to-br from-[#0a0a0a] to-[#1c0a0a] shadow-md hover:shadow-red-500 transition-all duration-300"
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
+      <div className="rounded-[15px] py-4 px-4 flex flex-col justify-between min-h-[230px]">
+        {/* Icon */}
+        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-[10px] p-2 min-h-[80px] max-h-[120px]">
+          <img
+            src={icon}
+            alt="service_icon"
+            className="object-contain w-[40px] h-[40px]"  // Taille encore réduite de l'icône
+          />
+        </div>
 
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+        {/* Title */}
+        <div className="mt-4 flex-1 flex flex-col items-center text-center">
+          <h3 className="text-red-500 text-[16px] font-bold">{title}</h3>  {/* Taille du texte réduite */}
+        </div>
       </div>
-    </motion.div>
-  </Tilt>
+    </Tilt>
+  </motion.div>
 );
 
 const About = () => {
