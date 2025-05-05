@@ -62,7 +62,12 @@ const VeilleCard = ({ veille }) => (
 
 const Veille = () => (
   <>
-    <motion.div variants={textVariant()}>
+    <motion.div
+      variants={textVariant()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <p className={`${styles.sectionSubText} text-center`}>
         RA pour la Formation et Maintenance
       </p>

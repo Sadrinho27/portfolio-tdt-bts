@@ -10,12 +10,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ name, description, tags, image, source_code_link, index }) => {
   return (
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.1, 0.75)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-    >
+    <div className="w-full sm:w-[360px] ...">
       <Tilt
         options={{
           max: 25,
@@ -58,7 +53,7 @@ const ProjectCard = ({ name, description, tags, image, source_code_link, index }
           </div>
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
@@ -86,13 +81,19 @@ const Works = () => {
         </motion.p>
 
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <motion.div
+        variants={fadeIn("up", "spring", 0.3, 0.75)} // ou textVariant, ou autre
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mt-20 flex flex-wrap gap-7"
+      >
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} {...project} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "works");
