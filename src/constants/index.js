@@ -90,52 +90,117 @@ export const experiences = [
     ],
   },
 ];
-
 export const veilles = [
   {
-    title: "Full Dive VR, utopie ou futur proche?",
-    company_name: "MBA DMB",
+    title: "R&D Case: Augmented Reality for Maintenance Training",
+    company_name: "NLR",
     icon: logo,
     iconBg: "#161329",
-    source: "https://blog.mbadmb.com/full-dive-vr-et-perception-haptique-utopie-ou-futur-proche-par-lucie-hautekiet/",
+    source: "https://www.nlr.org/newsroom/case/augmented-reality-for-maintenance-training/",
     points: [
-      "Réflexion sur la faisabilité du Full Dive VR, inspirée de l'univers de Sword Art Online, et sur les avancées technologiques nécessaires pour y parvenir.",
-      "Mise en lumière de l'importance de la perception haptique et des interfaces neuronales dans le développement de cette technologie.",
-    ],
+      "Étude de cas démontrant l'efficacité de la RA dans la formation à la maintenance, avec une meilleure rétention des connaissances et une réduction des erreurs.",
+      "Intégration de la RA dans le processus de formation pour une expérience d'apprentissage plus immersive et interactive."
+    ]
   },
   {
-    title: "The Next Level of Virtual Reality: Exploring Full Dive VR",
-    company_name: "EnableGeek",
+    title: "Leveraging Augmented Reality (AR) for Maintenance Training and Troubleshooting",
+    company_name: "Micromain",
     icon: logo,
     iconBg: "#161329",
-    source: "https://www.enablegeek.com/blog/the-next-level-of-virtual-reality-exploring-full-dive-vr/",
+    source: "https://www.micromain.com/leveraging-augmented-reality-ar-for-maintenance-training-and-troubleshooting-2/",
     points: [
-      "Exploration des fondements technologiques du Full Dive VR, incluant les interfaces cerveau-ordinateur, la simulation des sens et les technologies d'affichage avancées.",
-      "Présentation des applications potentielles dans divers secteurs tels que l'éducation, le divertissement et la collaboration à distance.",
-    ],
+      "Présentation de l'utilisation de la RA pour fournir des instructions de réparation étape par étape et un guidage en temps réel.",
+      "Amélioration de l'efficacité de la maintenance et réduction des coûts grâce à l'adoption de la RA."
+    ]
   },
   {
-    title: "Is Full Dive VR The Future Of Gaming? Myth Or Reality?",
-    company_name: "ARVRRealm",
+    title: "Exploring the Frontiers: A Comprehensive Review of Augmented Reality and Virtual Reality in Manufacturing and Industry",
+    company_name: "IJCSRR",
     icon: logo,
     iconBg: "#161329",
-    source: "https://arvrrealm.com/is-full-dive-vr-the-future-of-gaming-myth-or-reality/",
+    source: "https://ijcsrr.org/exploring-the-frontiers-a-comprehensive-review-of-augmented-reality-and-virtual-reality-in-manufacturing-and-industry/",
     points: [
-      "Discussion sur le potentiel du Full Dive VR dans le domaine du jeu vidéo, en mettant en avant les avantages et les défis technologiques et éthiques associés.",
-      "Analyse des obstacles à surmonter pour que cette technologie devienne une réalité grand public.",
-    ],
+      "Revue complète des applications de la RA et de la RV dans la fabrication, y compris la conception, la formation, la maintenance et le contrôle qualité.",
+      "Identification des avantages et des défis associés à l'intégration de la RA et de la RV dans les processus industriels."
+    ]
   },
   {
-    title: "Full Dive VR Technology: Possibilities and Limitations",
-    company_name: "RevolveAI",
+    title: "Augmented Reality Training - Roundtable Learning",
+    company_name: "Roundtable Learning",
     icon: logo,
     iconBg: "#161329",
-    source: "https://revolveai.com/full-dive-vr-technology/",
+    source: "https://roundtablelearning.com/augmented-reality-training/",
     points: [
-      "Examen des possibilités offertes par le Full Dive VR, notamment en matière d'immersion sensorielle grâce aux technologies haptiques.",
-      "Identification des limitations actuelles et des défis à relever pour une adoption généralisée.",
-    ],
+      "Exploration de l'apprentissage expérientiel via la RA, permettant une formation sans risque de dommages aux produits ou équipements.",
+      "Accroissement de la mobilité des formations grâce à la compatibilité mobile de la technologie RA."
+    ]
   },
+  {
+    title: "AR in Meat Packaging: Reinventing Service & Maintenance",
+    company_name: "MeatPoultry",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://www.meatpoultry.com/articles/30986-augmented-reality-for-maintenance-and-training-how-can-it-help",
+    points: [
+      "Application de la RA pour une maintenance proactive et une formation collaborative à distance dans l'industrie de l'emballage de viande.",
+      "Réduction des temps d'arrêt non planifiés et amélioration de l'efficacité des services grâce à la RA."
+    ]
+  },
+  {
+    title: "Revolutionizing Marine Corps Maintenance with AR/VR Technology",
+    company_name: "U.S. Marine Corps Logistics Command",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://www.logcom.marines.mil/News/Article/3863794/revolutionizing-marine-corps-maintenance-with-arvr-technology/",
+    points: [
+      "Utilisation de la RA et de la RV pour améliorer les diagnostics, la formation et réduire les coûts dans la maintenance du Corps des Marines.",
+      "Mise en œuvre de technologies immersives pour optimiser les procédures de maintenance et de formation."
+    ]
+  },
+  {
+    title: "Augmented Reality for Industrial Maintenance Using Deep Learning Techniques – A Review",
+    company_name: "IEEE",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://www.researchgate.net/publication/379204752_Augmented_Reality_for_Industrial_Maintenance_Using_Deep_Learning_Techniques-_A_Review",
+    points: [
+      "Examen des techniques d'apprentissage profond appliquées à la RA pour la maintenance industrielle.",
+      "Analyse des avantages et des défis de l'intégration de l'IA dans les systèmes de maintenance basés sur la RA."
+    ]
+  },
+  {
+    title: "Packaging's New Reality: Perfecting Service, Maintenance & Training with the Power of AR",
+    company_name: "Harpak-ULMA",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://www.harpak-ulma.com/resources/packagings-new-reality-perfecting-service-maintenance-training-with-the-power-of-ar/",
+    points: [
+      "Transformation de la maintenance et de la formation dans l'industrie de l'emballage grâce à la RA.",
+      "Utilisation de la RA pour des diagnostics en temps réel, une maintenance proactive et une formation améliorée."
+    ]
+  },
+  {
+    title: "Impact of Augmented Reality on Assistance and Training in Industry 4.0",
+    company_name: "MDPI",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://www.mdpi.com/2076-3417/14/11/4564",
+    points: [
+      "Exploration de l'intégration de la RA dans l'industrie 4.0, mettant l'accent sur l'amélioration de l'assistance technique et de la formation.",
+      "Analyse des avantages de la RA pour combler les lacunes de compétences techniques dans les environnements industriels."
+    ]
+  },
+  {
+    title: "User Experience Evaluation of AR Assisted Industrial Maintenance and Support Applications",
+    company_name: "arXiv",
+    icon: logo,
+    iconBg: "#161329",
+    source: "https://arxiv.org/abs/2410.17348",
+    points: [
+      "Évaluation de l'expérience utilisateur des applications de maintenance industrielle assistées par la RA.",
+      "Examen de l'impact de la RA sur la charge cognitive et l'efficacité des techniciens de maintenance."
+    ]
+  }
 ];
 export const projects = [
   {

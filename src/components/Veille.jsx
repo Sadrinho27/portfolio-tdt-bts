@@ -64,7 +64,7 @@ const Veille = () => (
   <>
     <motion.div variants={textVariant()}>
       <p className={`${styles.sectionSubText} text-center`}>
-        Full Dive VR
+        RA pour la Formation et Maintenance
       </p>
       <h2 className={`${styles.sectionHeadText} text-center`}>Veille technologique</h2>
     </motion.div>
