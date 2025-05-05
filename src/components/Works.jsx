@@ -77,7 +77,7 @@ const Works = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Voici les projets que j'ai pu réaliser, ils attestent de ma compétence, chaque projet est accompagné d'une petite description ainsi qu'un lien pour accéder au dépôt.
+          Ces projets démontrent mon savoir-faire technique. Pour chacun, vous trouverez une description concise ainsi qu’un lien vers le dépôt de code.
         </motion.p>
 
       </div>
@@ -96,4 +96,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(Works, "work");

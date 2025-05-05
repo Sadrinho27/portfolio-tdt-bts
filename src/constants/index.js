@@ -36,8 +36,12 @@ export const navLinks = [
     title: "Études",
   },
   {
-    id: "work",
+    id: "experience",
     title: "Expériences",
+  },
+  {
+    id: "work",
+    title: "Projets",
   },
   {
     id: "veille",
@@ -206,7 +210,7 @@ export const projects = [
   {
     name: "TP Blockchain",
     description:
-      "Le site sur lequel vous vous trouvez actuellement",
+      "Ce TP, réalisé en cours, explore la technologie blockchain et ses concepts fondamentaux. Il traite de l'utilisation de la blockchain pour la gestion des transactions et des identités, ainsi que de la configuration d'un nœud.",
     tags: [
       { name: "Blockchain", color: "blue-text-gradient" },
       { name: "Transactions", color: "green-text-gradient" },
@@ -219,7 +223,7 @@ export const projects = [
   {
     name: "Portfolio",
     description:
-      "Le site sur lequel vous vous trouvez actuellement",
+      "Le site sur lequel vous vous trouvez actuellement a été développé avec les frameworks React et Vite. Ce projet illustre mes compétences dans la création d'applications modernes et performantes.",
     tags: [
       { name: "Portfolio", color: "blue-text-gradient" },
       { name: "Identité", color: "green-text-gradient" },
@@ -232,7 +236,7 @@ export const projects = [
   {
     name: "Site Vitrine Sloom",
     description:
-      "Ceci est mon tout premier projet réalisé en informatique.",
+      "Il s'agit de mon tout premier projet réalisé lors d'un atelier professionnel : un site vitrine pour une entreprise fictive proposant des espaces de coworking.",
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "green-text-gradient" }
@@ -255,7 +259,7 @@ export const projects = [
   {
     name: "EasyBee Stock",
     description:
-      "Easybee se spécialise dans la vente d'équipements apicoles. Notre mission est de concevoir une application pour gérer les stocks.",
+      "EasyBee, entreprise fictive spécialisée dans la vente de matériel apicole, a développé une application Java pour optimiser la gestion de ses stocks. Cette solution permet aux salariés (vendeurs et préparateurs) de passer, suivre et préparer les commandes d'approvisionnement entre le magasin et l'entrepôt.",
     tags: [
       { name: "Eclipse", color: "green-text-gradient" },
       { name: "Java", color: "blue-text-gradient" },
@@ -267,7 +271,7 @@ export const projects = [
   {
     name: "EasyBee Formation",
     description:
-      "Easybee se spécialise dans la vente d'équipements apicoles. Notre mission est de concevoir un site web pour réserver des formations.",
+      "EasyBee, entreprise fictive spécialisée dans la vente de matériel apicole et la formation en apiculture, a développé une application web pour gérer ses formations. Les clients peuvent consulter et s'inscrire aux formations, tandis que les administrateurs gèrent les inscriptions et trient les participants selon différents critères.",
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "green-text-gradient" },
@@ -280,7 +284,7 @@ export const projects = [
   {
     name: "GEN IA",
     description:
-      "Outils pour la création de contrat au format 4nk",
+      "Un modèle IA (GPT-4) sur lequel nous avons dû apprendre à créer des contrats au format 4nk, un format développé par une entreprise spécialisée dans le web 5 décentralisé.",
     tags: [
       { name: "OpenIA", color: "blue-text-gradient" },
       { name: "JSON", color: "green-text-gradient" }
@@ -291,7 +295,7 @@ export const projects = [
   {
     name: "Retranscription IA",
     description:
-      "Outils pour la conversion de contrat normaux en contrat 4NK",
+      "Un modèle IA (GPT-4) sur lequel nous avons dû apprendre à convertir des contrats traditionnels en contrats au format 4NK, un format développé par une entreprise spécialisée dans le Web 5 décentralisé.",
     tags: [
       { name: "OpenIA", color: "blue-text-gradient" },
       { name: "JSON", color: "green-text-gradient" }
@@ -299,18 +303,18 @@ export const projects = [
     image: fourNK,
     source_code_link: "https://drive.google.com/file/d/1opFkNDAfyYNfCzSD5t0PptfqnZZY35CT/view?usp=sharing",
   },
-  {
-    name: "Intégration 4nk",
-    description:
-      "Intégration d'une solution logiciel dans un autre logiciel",
-    tags: [
-      { name: "Typescript", color: "blue-text-gradient" },
-      { name: "HTML", color: "green-text-gradient" },
-      { name: "CSS", color: "orange-text-gradient" }
-    ],
-    image: fourNK,
-    source_code_link: "",
-  },
+  // {
+  //   name: "Intégration 4nk",
+  //   description:
+  //     "Intégration d'une solution logiciel dans un autre logiciel",
+  //   tags: [
+  //     { name: "Typescript", color: "blue-text-gradient" },
+  //     { name: "HTML", color: "green-text-gradient" },
+  //     { name: "CSS", color: "orange-text-gradient" }
+  //   ],
+  //   image: fourNK,
+  //   source_code_link: "",
+  // },
   {
     name: "Quizzoum - Application de quiz sur Android",
     description:
