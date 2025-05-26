@@ -14,74 +14,67 @@ const Navbar = () => {
     }
   }, [toggle]);
 
-  const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+  const renderNavLinks = (isMobile) => (
+    <ul
+      className={`list-none ${isMobile ? 'flex sm:hidden flex-col' : 'hidden sm:flex flex-row'} gap-6`}
+    >
       {navLinks.map((link) => (
         <li
           key={link.id}
-          className={`
-          ${active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'}
-          relative text-[20px] font-medium cursor-pointer transition-colors duration-300
-          after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px]
-          after:bg-white after:transition-all after:duration-300 hover:after:w-full
-          hover:text-secondary
-        `}
+          className={`${
+            active === link.title
+              ? 'text-white'
+              : isMobile
+              ? 'text-secondary'
+              : 'text-white'
+          } relative text-[20px] font-medium cursor-pointer transition-colors duration-300 hover:text-secondary`}
           onClick={() => {
             setActive(link.title);
-            if (isSecondary) {
-              setToggle(false);
-            }
+            if (isMobile) setToggle(false);
           }}
         >
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li
-        className={`text-${isSecondary ? 'secondary' : 'white'
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
-      >
-      </li>
     </ul>
   );
 
   return (
-    <>
-      <nav
-        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary`}
-      >
-        <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-          <Link
-            to="/portfolio-tdt2"
-            className="flex items-center gap-2"
-            onClick={() => {
-              setActive('');
-              window.scrollTo(0, 0);
-            }}
+    <nav className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 bg-primary`}>
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <Link
+          to="/portfolio-tdt2"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive('');
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[20px] font-bold cursor-pointer flex">
+            Titouan&nbsp;<span className="sm:block hidden">DEMEILLEZ TABERE</span>
+          </p>
+        </Link>
+
+        {/* Desktop Nav */}
+        {renderNavLinks(false)}
+
+        {/* Mobile Menu Toggle */}
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[18px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
+          <div
+            className={`absolute top-14 right-4 p-6 min-w-[150px] rounded-xl bg-black bg-opacity-90 z-50 ${toggle ? 'flex' : 'hidden'}`}
           >
-            <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-            <p className="text-white text-[20px] font-bold cursor-pointer flex">
-              Titouan&nbsp;
-              <span className="sm:block hidden">DEMEILLEZ TABERE</span>
-            </p>
-          </Link>
-          {renderNavLinks(false)}
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[28px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-            <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${toggle ? 'flex' : 'hidden'
-                }`}
-            >
-              {renderNavLinks(true)}
-            </div>
+            {renderNavLinks(true)}
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
 
