@@ -34,12 +34,11 @@ const Stars = () => {
 };
 
 const StarsCanvas = () => (
-  <div className="stars-canvas-container">
+  <div className="absolute inset-0 z-0 pointer-events-none">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <Stars />
       </Suspense>
-
       <Preload all />
     </Canvas>
   </div>
