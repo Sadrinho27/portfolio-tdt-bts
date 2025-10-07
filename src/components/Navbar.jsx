@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 bg-primary`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
-          to="/portfolio-tdt2"
+          to="/portfolio-tdt-bts"
           className="flex items-center gap-2"
           onClick={() => {
             setActive('');

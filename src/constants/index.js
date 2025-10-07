@@ -231,7 +231,7 @@ export const projects = [
     ],
     image: portfolio,
     source_code_link:
-      "https://github.com/Sadrinho27/portfolio-tdt2",
+      "https://github.com/Sadrinho27/portfolio-tdt-bts",
   },
   {
     name: "Site Vitrine Sloom",

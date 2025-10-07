@@ -18,8 +18,8 @@ Bienvenue dans le répertoire de mon portfolio personnel, développé avec **Rea
 ## 🚀 Lancement en local
 
 ```bash
-git clone https://github.com/Sadrinho27/portfolio-tdt2.git
-cd portfolio-tdt2
+git clone https://github.com/Sadrinho27/portfolio-tdt-bts.git
+cd portfolio-tdt-bts
 npm install
 npm run dev
 ```
@@ -37,7 +37,7 @@ npm run deploy
 Ajouter au `package.json` :
 
 ```json
-"homepage": "https://Sadrinho27.github.io/portfolio-tdt2/",
+"homepage": "https://Sadrinho27.github.io/portfolio-tdt-bts/",
 "scripts": {
     "dev": "vite",
     "build": "vite build",
